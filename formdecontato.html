@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu formulário de contato</title>
+    <link rel="stylesheet" href="formdecontato.css">
+</head>
+<body>
+
+    <form name = "meu_form">
+
+    <h1>Entre em contato</h1>
+
+    <input type="text" id="nomeid" placeholder="Digite seu nome" required="required" name="nome"/>
+     <label for="nome">Nome</label>
+
+    <p></p>
+
+    <input type="email" id="emailid" placeholder="seuid@email.com" name="email"/>
+     <label for="Email">Email</label>
+
+    <p></p>
+
+    <textarea placeholder="Deixe sua opinião"></textarea>
+
+    <p></p>
+
+    <input type="submit" class="enviar" onclick="enviar();" value="Enviar"/>
+
+    <p><p>
+
+        <script>
+
+            function enviar() {
+        
+                let nome = document.getElementById("nomeid")
+        
+                if (nome.value != "") {
+                    alert(`Obrigado senhor(a) ` + nome.value + ` os seus dados foram encaminhados com sucesso`)
+                }
+            } 
+        
+            var dt = new Date(); 
+            var diasem = dt.getDay(); // Começa com indice 0 (Domingo é 0)
+            var dia = dt.getDate();
+            var mes = dt.getMonth(); // Começa com indice 0 (janeiro é 0)
+            var ano = dt.getFullYear(); 
+        
+            var meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
+            var semana = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sabado"]
+        
+             document.write(semana[diasem] +  ","  + dia +  " de " + meses[mes] + " de " + ano);
+        
+        </script>
+
+    </form>  
+</body>
+<footer><strong>Diogo &copy; Senai </strong></footer>
+</html>
